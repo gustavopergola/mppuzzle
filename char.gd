@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-var gravity = 9.8 * Vector3.DOWN
+var gravity = 8 * Vector3.DOWN
 var finalForce = gravity
 var movementForce = Vector3(0,0,0)
 export var speed = 8
