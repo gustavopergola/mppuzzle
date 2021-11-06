@@ -8,7 +8,7 @@ func _ready() -> void:
 	get_tree().connect("connection_failed", self, "_connection_failed")
 
 func load_game():
-	var lobby = load("res://lobby.tscn").instance()
+	var lobby = load("res://scenes/lobby.tscn").instance()
 	get_tree().get_root().add_child(lobby)
 	hide()
 

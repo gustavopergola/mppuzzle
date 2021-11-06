@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://menu.gd" type="Script" id=1]
-[ext_resource path="res://IPInput.gd" type="Script" id=2]
-[ext_resource path="res://IPPublico.gd" type="Script" id=3]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://scripts/IPInput.gd" type="Script" id=2]
+[ext_resource path="res://scripts/IPPublico.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

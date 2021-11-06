@@ -6,7 +6,5 @@ func _ready():
 	
 
 func start_game():
-	var menu = load("res://menu.tscn").instance()
+	var menu = load("res://scenes/menu.tscn").instance()
 	get_tree().get_root().add_child(menu)
-
-
