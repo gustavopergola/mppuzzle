@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/char.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/wall.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/lobby.gd" type="Script" id=4]
+[ext_resource path="res://kenney/Models/basicCharacter.fbx" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -21,7 +22,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50756, 4.10535, 0 )
 transform = Transform( 1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 13, 17 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 0.813172, 0.582024, 0, -0.582024, 0.813172, 0, 0, 0, 1, -3.90994, 2.04511, 0 )
+transform = Transform( 0.813172, 0.582024, 0, -0.582024, 0.813172, 0, 0, 0, 1, -3.90994, 2.72982, 0 )
 physics_material_override = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
@@ -30,6 +31,7 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0, 1, -1.82412, 2.54857, 0 )
 shape = SubResource( 3 )
 
 [node name="static" type="Spatial" parent="."]
@@ -49,9 +51,9 @@ transform = Transform( -5.92312e-15, -1.35505e-07, -5.1, 1, -4.37114e-08, 0, -4.
 [node name="floor" parent="static" instance=ExtResource( 2 )]
 transform = Transform( 5.14862, 0, 0, 0, 1, 0, 0, 0, 5.14862, -1, -0.423834, 0 )
 
-[node name="floor2" parent="static" instance=ExtResource( 2 )]
-transform = Transform( 4.97318, 0.258819, 0, -1.33256, 0.965926, 0, 0, 0, 5.14862, -6, 0.576166, 0 )
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.104243, 0.991633, -0.0761447, -0.969231, 0.118457, 0.215776, 0.22299, 0.0513087, 0.97347, -76, 43, 0 )
 shadow_enabled = true
+
+[node name="basicCharacter" parent="." instance=ExtResource( 5 )]
+transform = Transform( 6.85598, 0, 0, 0, 6.85598, 0, 0, 0, 6.85598, 5.0653, 0.0727317, -0.183494 )
